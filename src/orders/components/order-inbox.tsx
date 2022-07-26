@@ -2,7 +2,6 @@ import {DotsVerticalIcon} from "@heroicons/react/solid";
 import {classNames} from "../../common/helpers";
 import Order from "./order";
 import Empty from "../../common/components/empty";
-import {useState} from "react";
 
 export interface Order {
     id: string;
@@ -228,10 +227,8 @@ interface OrderItemProps {
 
 }
 function OrderItem({order}: OrderItemProps ) {
-    const [wasVisited, setWasVisited] = useState(false);
-    const fontWeight = wasVisited ? 'font-normal' : 'font-extrabold'
     return (
-        <div className={'flex flex-col space-y-1 ' + fontWeight} onClick={()=>setWasVisited(true)}>
+        <div className={'flex flex-col space-y-1'}>
             <div className='flex justify-between'>
                 <p className="flex flex-col text-xs text-gray-600">
                     {order.id}

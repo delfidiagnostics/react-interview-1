@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.hero-text {
+  /*font-family: 'DM Serif Text', serif;*/
+  /*font-family: 'Patua One', cursive;*/
+  /*font-family: 'Alfa Slab One', cursive;*/
+  /*font-family: 'Oswald', sans-serif;*/
+  /*font-family: 'Barlow', sans-serif;*/
+  font-family: 'Archivo Black', sans-serif;
+}

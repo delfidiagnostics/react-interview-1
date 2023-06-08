@@ -2,9 +2,8 @@ import {Route, Routes} from 'react-router-dom';
 import Home from './home/components/home';
 import MainLayout from './common/components/layout';
 import Login from './auth/components/login';
-import ProtectedRoute from './auth/components/protected-route';
 import Orders from './orders/components/orders';
-import Patients, {PatientsPagePermissions} from './patients/components/patients';
+import Patients from './patients/components/patients';
 import NotFound from './common/components/not-found';
 import Unauthorized from './common/components/unauthorized';
 import Patient from "./patients/components/patient";
@@ -19,9 +18,9 @@ function App() {
                     <Route
                         index
                         element={
-                            <ProtectedRoute>
+                            
                                 <Home/>
-                            </ProtectedRoute>
+                            
                         }
                     ></Route>
                     <Route
@@ -40,9 +39,9 @@ function App() {
                     <Route
                         path="patients"
                         element={
-                            <ProtectedRoute requiredPermissions={PatientsPagePermissions}>
+                            
                                 <Patients/>
-                            </ProtectedRoute>
+                            
                         }
                     >
                     </Route>
